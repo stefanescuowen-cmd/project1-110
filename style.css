@@ -19,11 +19,10 @@ header{
     background-attachment: fixed;
 }
 
-img{
+nav img{
     width: 100px;
     height: 100px;
     overflow: hidden;
-    margin: 20;
 }
 
 .container img{
@@ -36,7 +35,7 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     list-style: none;
 }
 
@@ -58,6 +57,7 @@ nav a::after{
 
 header h1{
     color: white;
+    margin: 20px 0;
 }
 
 #btn1{
