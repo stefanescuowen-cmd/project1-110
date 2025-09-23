@@ -7,6 +7,7 @@
 html{
     color: #555;
     font-family: 'lato', sans-serif;
+    font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
 }
@@ -18,11 +19,10 @@ header{
     background-attachment: fixed;
 }
 
-img{
+nav img{
     width: 100px;
     height: 100px;
     overflow: hidden;
-    margin: 20;
 }
 .container img{
     width: 100%;
@@ -30,12 +30,33 @@ img{
     object-fit: cover;
 }
 
-ul li{
-    display: inline;
+nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    list-style: none;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    
+}
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
 }
 
 header h1{
     color: white;
+    margin: 20px 0;
 }
 
 #btn1{
@@ -76,7 +97,7 @@ a .btn{
     color: #fff;
 }
 
-.btn:hover, btn:active{
+.btn:hover, .btn:active{
     background-color: #cf6d17;
 }
 
@@ -92,12 +113,12 @@ a .btn{
     transition: color 0.2s;
 }
 
-.btn-full:hover, btn-ghost:active{
+.btn-full:hover, .btn-ghost:active{
     border: 1px solid #cf6d17;
 
 }
 
-.btn-ghost:hover, btn-full:active{
+.btn-ghost:hover, .btn-full:active{
     border: 1px solid #cf6d17;
     color: #fff;
 }
