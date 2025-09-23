@@ -1,3 +1,28 @@
 header{
     background-image: url("Omnifood Contents/hero.jpg");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+}
+
+ul{
+
+}
+
+img{
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    margin: 20;
+}
+
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+ul li{
+    display: inline;
 }
