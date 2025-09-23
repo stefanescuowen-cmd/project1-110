@@ -74,6 +74,11 @@ header h1{
 
 }
 
+.row{
+    max-width: 1140;
+    margin: 0 auto;
+}
+
 .hero-text-box{
     width: 1140px;
     position: absolute;
