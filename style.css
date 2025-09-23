@@ -18,17 +18,12 @@ header{
     background-attachment: fixed;
 }
 
-ul{
-
-}
-
 img{
     width: 100px;
     height: 100px;
     overflow: hidden;
     margin: 20;
 }
-
 .container img{
     width: 100%;
     height: 100%;
@@ -44,15 +39,22 @@ header h1{
 }
 
 #btn1{
+    display: inline;
     background-color: #e67e22;
     color: white;
+    text-decoration: none;
 }
 
 #btn2{
+    display: inline;
     background: transparent;
     border: 2px solid #e67e22;
     color: #e67e22;
     padding: 10px 20px;
     border-radius: 30px;
+    text-decoration: none;
+}
 
+a .btn{
+    text-decoration: none;
 }
