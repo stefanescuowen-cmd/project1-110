@@ -59,12 +59,6 @@ header{
     background-attachment: fixed;
 }
 
-nav img{
-    width: 100px;
-    height: 100px;
-    overflow: hidden;
-}
-
 .container img{
     width: 100%;
     height: 100%;
@@ -73,35 +67,54 @@ nav img{
 
 nav {
     width: 100%;
-    padding: 20px 0;
     position: absolute;
     top: 0;
     left: 0;
     z-index: 10;
+    padding: 20px 0;
 }
 
-nav ul{
+.row {
+    max-width: 1140px;
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    gap: 50px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+}
+
+.main-nav {
+    display: flex;
     list-style: none;
+    gap: 40px;
+    margin: 0;
+    padding: 0;
 }
 
-nav a{
+.main-nav li {
+    position: relative;
+}
+
+.main-nav li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-size: 18px;
-    
+    font-weight: 300;
+    font-size: 16px;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 4px;
 }
 
-nav a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 2px;
+.main-nav li a:hover {
+    border-bottom: 2px solid #e67e22;
+}
+
+.main-nav li a.active {
+    border-bottom: 2px solid #e67e22;
 }
 
 #btn1{
@@ -175,19 +188,40 @@ input[type=submit]:active {
     color: #fff;
 }
 
-.icon-big {
-    font-size: 350%;
-    color: #e67e22;
-    margin-bottom: 15px;
-    --ionicon-stroke-width: 32px;
-}
+/* ---------- FEATURES SECTION ---------- */
 
+/* Container for the section */
 .section-features {
     padding: 80px 0;
     background-color: #f7f7f7;
     text-align: center;
 }
 
+/* Heading row */
+.section-features > .row:first-of-type {
+    display: block;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-features > .row:first-of-type h2 {
+    margin-bottom: 20px;
+    font-size: 180%;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    line-height: 1.4;
+}
+
+.section-features > .row:first-of-type h2:after {
+    display: block;
+    height: 2px;
+    width: 100px;
+    background-color: #e67e22;
+    content: " ";
+    margin: 20px auto 0;
+}
+
+/* Subtext paragraph under heading */
 .section-features .long-copy {
     font-size: 18px;
     line-height: 1.6;
@@ -196,26 +230,61 @@ input[type=submit]:active {
     color: #555;
 }
 
+/* Features grid: horizontal row of features */
 .features-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     gap: 30px;
+    flex-wrap: nowrap;
 }
 
+/* Individual feature column */
 .col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     padding: 20px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
 }
 
+/* Icon styling */
+.icon-big { 
+    font-size: 350%;
+    color: #e67e22;
+    fill: #e67e22;
+    margin-bottom: 15px;
+    --ionicon-stroke-width: 32px; 
+}
+
+/* Headings inside features */
 .col h3 {
     font-size: 110%;
     margin-bottom: 15px;
     font-weight: 400;
+    text-transform: uppercase;
 }
 
+/* Paragraph inside features */
 .col p {
     font-size: 90%;
     line-height: 1.5;
+    color: #555;
+}
+
+/* Fade-in animation keyframes */
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Media Queries */
