@@ -4,12 +4,18 @@
     box-sizing: border-box;
 }
 
-html{
+html, body{
+    background-color: #fff;
     color: #555;
     font-family: 'lato', sans-serif;
     font-weight: 300;
     font-size: 20px;
     text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+h1, h2, h3{
+    text-transform: capitalize;
 }
 
 header{
@@ -87,38 +93,47 @@ header h1{
     transform: translate(-50%, -50%);
 }
 
-.btn{
+.btn:link,
+.btn:visited, 
+input[type=submit] {
     display: inline-block;
     padding: 10px 30px;
     font-weight: 300;
     text-decoration: none;
     border-radius: 200px;
+    transition: background-color 0.2s, border 0.2s, color 0.2s;
+ }
+
+.btn-full:link,
+.btn-full:visited, 
+input[type=submit] {
+    background-color: #e67e22;
+    border: 1px solid #e67e27;
     color: #fff;
+    margin-right: 15px;
+ }
+
+.btn-ghost:link,
+.btn-ghost:visited {
+    border: 1px solid #e67e27;
+    color: #e67e27;
 }
 
-.btn:hover, .btn:active{
+.btn:hover,
+.btn:active, 
+input[type=submit]:hover,
+input[type=submit]:active {
     background-color: #cf6d17;
 }
 
-.btn-full{
-    background-color: #e67e22;
-    border: 1px solid #e67e22;
-    color: #fff;
-}
+.btn-full:hover,
+.btn-full:active {
+    border: 1px solid #e67e27;
+ }
 
-.btn-ghost{
-    border: 1px solid;
-    color: #e67e22;
-    transition: color 0.2s;
-}
-
-.btn-full:hover, .btn-ghost:active{
-    border: 1px solid #cf6d17;
-
-}
-
-.btn-ghost:hover, .btn-full:active{
-    border: 1px solid #cf6d17;
+.btn-ghost:hover,
+.btn-ghost:active {
+    border: 1px solid #e67e27;
     color: #fff;
 }
 
@@ -130,4 +145,51 @@ h2:after{
     content: " ";
     margin: auto;
     margin-top: 30px;
+}
+
+.icon-big{
+    font-size: 350%;
+    display: block;
+    color: #e67e22;
+    margin-bottom: 10px;
+    --ionicon-stroke-width: 20px;
+}
+
+.section-features .long-copy {
+    margin-bottom: 30px;
+}
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+   list-style: none;
+   width: 100%;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.meal-photo img {
+    opacity: 0.7;
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);
+    transition: transform 0.5s opacity 0.5s;
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);
 }
