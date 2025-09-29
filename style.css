@@ -16,6 +16,8 @@ html, body{
 
 h1, h2, h3{
     text-transform: uppercase;
+    line-height: 1.4;
+    font-weight: 300;
 }
 
 h1 {
@@ -69,6 +71,15 @@ nav img{
     object-fit: cover;
 }
 
+nav {
+    width: 100%;
+    padding: 20px 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
 nav ul{
     display: flex;
     justify-content: center;
@@ -91,11 +102,6 @@ nav a::after{
     bottom: 0;
     width: 0;
     height: 2px;
-}
-
-header h1{
-    color: white;
-    margin: 20px 0;
 }
 
 #btn1{
@@ -169,54 +175,48 @@ input[type=submit]:active {
     color: #fff;
 }
 
-.icon-big{
+.icon-big {
     font-size: 350%;
-    display: block;
     color: #e67e22;
-    margin-bottom: 10px;
-    --ionicon-stroke-width: 20px;
+    margin-bottom: 15px;
+    --ionicon-stroke-width: 32px;
+}
+
+.section-features {
+    padding: 80px 0;
+    background-color: #f7f7f7;
+    text-align: center;
 }
 
 .section-features .long-copy {
-    margin-bottom: 30px;
+    font-size: 18px;
+    line-height: 1.6;
+    width: 70%;
+    margin: 0 auto 50px;
+    color: #555;
 }
 
-.section-meals {
-    padding: 0;
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
 }
 
-.meals-showcase {
-   list-style: none;
-   width: 100%;
+.col {
+    text-align: center;
+    padding: 20px;
 }
 
-.meals-showcase li {
-    display: block;
-    float: left;
-    width: 25%;
+.col h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+    font-weight: 400;
 }
 
-.meal-photo {
-    width: 100%;
-    margin: 0;
-    overflow: hidden;
-    background-color: #000;
+.col p {
+    font-size: 90%;
+    line-height: 1.5;
 }
-
-.meal-photo img {
-    opacity: 0.7;
-    width: 100%;
-    height: auto;
-    transform: scale(1.15);
-    transition: transform 0.5s opacity 0.5s;
-}
-
-.meal-photo img:hover {
-    opacity: 1;
-    transform: scale(1.03);
-}
-
-
 
 /* Media Queries */
 
