@@ -250,20 +250,17 @@ nav {
     animation: fadeInUp 1s forwards;
     padding: 50px 0;
 }
-
 .col h3 {
     font-size: 110%;
     margin-bottom: 15px;
     font-weight: 400;
     text-transform: uppercase;
 }
-
 .col p {
     font-size: 90%;
     line-height: 1.5;
     color: #555;
 }
-
 .favMeal{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
