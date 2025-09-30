@@ -53,6 +53,8 @@ h2:after{
 }
 
 header{
+    position: relative;
+    z-index: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Omnifood Contents/hero.jpg");
     background-size: cover;
     height: 100vh;
@@ -481,6 +483,33 @@ nav {
 
 /* Form */
 
+.map-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  margin-top: -100px;
+  padding-top: 100px;
+
+}
+
+.map-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  z-index: 0; 
+  pointer-events: none; 
+  filter: brightness(0.7);
+}
+
+
 .form-container{
     max-width: 600px;
     margin: 2rem auto;
@@ -493,10 +522,16 @@ form{
     gap: 1rem;
 }
 
+.form-group{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
 .form-group label{
     width: 150px;
     text-align: right;
-    margin-right: 10px;
+    margin-right: 0;
 }
 
 input[type=text],
@@ -504,7 +539,7 @@ input[type=email],
 select,
 textarea{
     flex: 1;
-    width: 100%;
+    width: auto;
     padding: 7px;
     border-radius: 3px;
     border: 1px solid #ccc;
@@ -513,7 +548,7 @@ textarea{
 .newsletter{
     display: flex;
     align-items: center;
-    gap: .5rem
+    gap: 1rem
 }
 
 .newsletter-question{
@@ -529,7 +564,23 @@ input[type=checkbox]{
     margin: 10px 5px 10px 0;
 }
 
+input[type="submit"]{
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 200px;
+  background-color: #e67e22;
+  border: 1px solid #e67e27;
+  color: #fff;
+  transition: background-color 0.2s, border 0.2s, color 0.2s;
+  cursor: pointer;
+  margin-left: 150px;
+}
 
+input[type="submit"]:hover {
+  background-color: #cf6d17;
+  border: 1px solid #e67e27;
+}
 
 *:focus{
     outline: none;
