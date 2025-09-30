@@ -53,6 +53,8 @@ h2:after{
 }
 
 header{
+    position: relative;
+    z-index: 1;
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("Omnifood Contents/hero.jpg");
     background-size: cover;
     height: 100vh;
@@ -476,6 +478,113 @@ nav {
     color: black;
 }
 
+/* Form & Map */
+
+.map-box {
+  width: 100%;
+  height: 560px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+  border: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  filter: brightness(0.7);
+  pointer-events: none;
+}
+
+.form-box {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 40px;
+  z-index: 10;
+  box-sizing: border-box;
+  overflow-y: auto;
+  color: #555;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-group label,
+.newsletter-question {
+  width: 180px;
+  text-align: left;
+  margin-top: 7px;
+  box-sizing: border-box;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea,
+.newsletter input[type=checkbox] {
+  flex: 1;
+  padding: 7px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.newsletter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.newsletter label {
+  margin: 0;
+}
+
+.form-group.submit-group {
+  justify-content: flex-start;
+}
+
+input[type="submit"] {
+  display: inline-block;
+  padding: 10px 30px;
+  font-weight: 300;
+  border-radius: 200px;
+  background-color: #e67e22;
+  border: 1px solid #e67e27;
+  color: #fff;
+  cursor: pointer;
+  margin: 0;
+  align-self: flex-start;
+  margin-left: 180px;
+}
+
+input[type="submit"]:hover {
+  background-color: #cf6d17;
+  border: 1px solid #e67e27;
+}
+
+*:focus {
+  outline: none;
+}
+
 .quotes{
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("Omnifood Contents/back-customers.jpg");
@@ -483,6 +592,7 @@ nav {
     background-attachment: fixed;
     text-align: center;
     color: white;
+    padding-bottom:50px;
 }
 blockquote::before{
     content: "\201c";
