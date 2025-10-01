@@ -529,6 +529,61 @@ blockquote{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    padding-bottom: 100px;
+}
+footer{
+    background-color: #333;
+    padding: 50px;
+    font-size: 80%;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: #888;
+}
+.topRow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 200px;
+}
+.topRow ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.left{
+    display: flex;
+}
+.right{
+    display: flex;
+    margin-left: auto;
+    margin-right: 200px;
+    
+}
+.right ion-icon{
+    font-size: 150%;
+}
+.facebook ion-icon:hover{
+    color: rgb(0, 102, 255);
+}
+.twitter ion-icon:hover{
+    color: lightblue;
+}
+.mail ion-icon:hover{
+    color: coral;
+}
+.gram ion-icon:hover{
+    color: rgb(201, 17, 130);
+}
+.bottom{
+    color: #888;
+    margin-top: 20px;
+}
+.left a:hover{
+    color: white;
 }
 
 /* Eating Healthy */
